@@ -187,7 +187,7 @@ jpegstream::write (const char_type *line, std::streamsize n)
     // classes wrt to boundary alignment but for now everything works
     // as far as iscan is concerned.
     for (unsigned int i = 0; i < _h_sz; ++i) {
-      div_t index = div (i, 8 * sizeof (JSAMPLE));
+      div_t index = div ((int) i, (int) 8 * sizeof (JSAMPLE));
       int offset = 8 * sizeof (JSAMPLE) - 1 - index.rem;
       _scanline[i] = ((line[index.quot] & (1 << offset))
 		      ? 0 : ~0);
