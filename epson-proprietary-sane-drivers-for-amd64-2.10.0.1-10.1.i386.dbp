@@ -1,0 +1,121 @@
+[DEBREATE-0.7.13]
+<<CTRL>>
+Package: epson-proprietary-sane-drivers-for-amd64
+Version: 2.10.0.1-10.1
+Maintainer: Alexander Trufanov <trufanovan@gmail.com>
+Section: libs
+Architecture: i386
+Priority: optional
+Depends: libsane:i386, libgtk2.0-0:i386, libpangox-1.0-0:i386, libpangoxft-1.0-0:i386, libjpeg62:i386
+Description: Epson x86 scanner drivers support for x64 system
+ This package contains 32-bit Epkowa SANE backend with a dozen of 32-bit plugins for the old Epson scanners; 32-bit iscan v. 2.10 frontend and a copy of 32-bit saned service (v. 1.0.27-1). It's designed to be installed on 64-bit systems with systemd. Drivers may be used directly by 32-bit frontend or by any 64-bit frontend via 32-bit saned server running on localhost.
+
+<</CTRL>>
+<<FILES>>
+1
+/tmp/1/etc/default/saned32 -> saned32 -> /etc/default/
+/tmp/1/etc/hotplug/usb/iscan-device* -> iscan-device -> /etc/hotplug/usb/
+/tmp/1/etc/hotplug/usb/iscan.usermap -> iscan.usermap -> /etc/hotplug/usb/
+/tmp/1/etc/sane.d/epkowa.conf -> epkowa.conf -> /etc/sane.d/
+/tmp/1/lib/systemd/system/saned32.service -> saned32.service -> /lib/systemd/system/
+/tmp/1/lib/systemd/system/saned32.socket -> saned32.socket -> /lib/systemd/system/
+/tmp/1/lib/systemd/system/saned32@.service -> saned32@.service -> /lib/systemd/system/
+/tmp/1/usr/bin/iscan* -> iscan -> /usr/bin/
+/tmp/1/usr/lib/i386-linux-gnu/libesmod.so* -> libesmod.so -> /usr/lib/x86_64-linux-gnu/
+/tmp/1/usr/lib/i386-linux-gnu/libesmod.so.1* -> libesmod.so.1 -> /usr/lib/x86_64-linux-gnu/
+/tmp/1/usr/lib/i386-linux-gnu/libesmod.so.1.1.0* -> libesmod.so.1.1.0 -> /usr/lib/x86_64-linux-gnu/
+/tmp/1/usr/lib/i386-linux-gnu/sane/libsane-epkowa.la* -> libsane-epkowa.la -> /usr/lib/x86_64-linux-gnu/sane/
+/tmp/1/usr/lib/i386-linux-gnu/sane/libsane-epkowa.so.1* -> libsane-epkowa.so.1 -> /usr/lib/x86_64-linux-gnu/sane/
+/tmp/1/usr/lib/i386-linux-gnu/sane/libsane-epkowa.so.1.0.15* -> libsane-epkowa.so.1.0.15 -> /usr/lib/x86_64-linux-gnu/sane/
+/tmp/1/usr/lib/iscan/libesint1F.so* -> libesint1F.so -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint1F.so.2* -> libesint1F.so.2 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint1F.so.2.0.0* -> libesint1F.so.2.0.0 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint23.so* -> libesint23.so -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint23.so.2* -> libesint23.so.2 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint23.so.2.0.0* -> libesint23.so.2.0.0 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint32.so* -> libesint32.so -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint32.so.2* -> libesint32.so.2 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint32.so.2.0.0* -> libesint32.so.2.0.0 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint41.so* -> libesint41.so -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint41.so.2* -> libesint41.so.2 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint41.so.2.0.0* -> libesint41.so.2.0.0 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint43.so* -> libesint43.so -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint43.so.2* -> libesint43.so.2 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint43.so.2.0.0* -> libesint43.so.2.0.0 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint52.so* -> libesint52.so -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint52.so.2* -> libesint52.so.2 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint52.so.2.0.0* -> libesint52.so.2.0.0 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint54.so* -> libesint54.so -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint54.so.2* -> libesint54.so.2 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint54.so.2.0.0* -> libesint54.so.2.0.0 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint66.so* -> libesint66.so -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint66.so.2* -> libesint66.so.2 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint66.so.2.0.0* -> libesint66.so.2.0.0 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint68.so* -> libesint68.so -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint68.so.2* -> libesint68.so.2 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint68.so.2.0.0* -> libesint68.so.2.0.0 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint7A.so* -> libesint7A.so -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint7A.so.2* -> libesint7A.so.2 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint7A.so.2.0.0* -> libesint7A.so.2.0.0 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint7E.so* -> libesint7E.so -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint7E.so.2* -> libesint7E.so.2 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/libesint7E.so.2.0.0* -> libesint7E.so.2.0.0 -> /usr/lib/iscan/
+/tmp/1/usr/lib/iscan/make-udev-rules* -> make-udev-rules -> /usr/lib/iscan/
+/tmp/1/usr/sbin/saned32* -> saned32 -> /usr/lib/sbin/
+/tmp/1/usr/share/doc/iscan-2.10.0 -> iscan-2.10.0 -> /usr/share/doc/
+/tmp/1/usr/share/doc/packages -> packages -> /usr/share/doc/
+/tmp/1/usr/share/locale/de -> de -> /usr/locale/
+/tmp/1/usr/share/locale/en@boldquot -> en@boldquot -> /usr/locale/
+/tmp/1/usr/share/locale/en@quot -> en@quot -> /usr/locale/
+/tmp/1/usr/share/locale/es -> es -> /usr/locale/
+/tmp/1/usr/share/locale/fr -> fr -> /usr/locale/
+/tmp/1/usr/share/locale/it -> it -> /usr/locale/
+/tmp/1/usr/share/locale/ja -> ja -> /usr/locale/
+/tmp/1/usr/share/locale/ko -> ko -> /usr/locale/
+/tmp/1/usr/share/locale/nl -> nl -> /usr/locale/
+/tmp/1/usr/share/locale/pt -> pt -> /usr/locale/
+/tmp/1/usr/share/locale/zh_CN -> zh_CN -> /usr/locale/
+/tmp/1/usr/share/locale/zh_TW -> zh_TW -> /usr/locale/
+/tmp/1/usr/share/man/man1 -> man1 -> /usr/man/
+/tmp/1/usr/share/man/man5 -> man5 -> /usr/man/
+<</FILES>>
+<<SCRIPTS>>
+<<PREINST>>
+0
+<</PREINST>>
+<<POSTINST>>
+0
+<</POSTINST>>
+<<PRERM>>
+0
+<</PRERM>>
+<<POSTRM>>
+0
+<</POSTRM>>
+<</SCRIPTS>>
+<<CHANGELOG>>
+<<DEST>>DEFAULT<</DEST>>
+epson-proprietary-sane-drivers-for-amd64 (1.0.0) ; urgency=low
+
+  * First version made of
+    iscan-2.10.0-1.c2.i386.rpm
+    iscan-proprietary-drivers-2.10.0.1-10.1.i586.rpm
+    libsane
+
+ --  <>  Thu, 22 Nov 2018 14:55:34 +0300
+
+<</CHANGELOG>>
+<<COPYRIGHT>>
+Saned32 is an actual copy of saned executable for i386 and provided by its GPL-2+ license. Please refer to the /usr/share/doc/libsane1/copyright in libsane1_1.0.27-1_i386.deb
+
+Epson proprietary drivers and iscan 2.10 frontend are provided under EPSON AVASYS PUBLIC LICENSE which cold be found in /usr/share/doc/packages/iscan-proprietary-drivers/ and /usr/share/doc/iscan-2.10.0/
+<</COPYRIGHT>>
+<<MENU>>
+0
+<</MENU>>
+<<BUILD>>
+1
+1
+1
+strip
+<</BUILD>>

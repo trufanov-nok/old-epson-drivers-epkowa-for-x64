@@ -1,0 +1,179 @@
+# iscan.usermap -- 
+# Copyright (C) 2005--2007  SEIKO EPSON Corporation
+#
+# This file is part of "Image Scan! for Linux"
+# You can redistribute it and/or modify it under the terms of the GNU
+# General Public License as published by the Free Software Foundation;
+# either version 2 of the License or at your option any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY;  without even the implied warranty of FITNESS
+# FOR A PARTICULAR PURPOSE or MERCHANTABILITY.
+# See the GNU General Public License for more details.
+#
+# You should have received a verbatim copy of the GNU General Public
+# License along with this program; if not, write to:
+#
+#      Free Software Foundation, Inc.
+#      59 Temple Place, Suite 330
+#      Boston, MA  02111-1307  USA
+#
+#
+# The following provides information on all USB devices supported by
+# "Image Scan! for Linux" for use by hotplug to determine which user
+# space program/script to run when a newly plugged in USB device has
+# been detected by the kernel.  For "Image Scan! for Linux", we only
+# match on the vendor and product IDs.
+#
+# Each entry provides the following "match info":
+#
+# program name      match_flags idVendor idProduct bcdDevice_lo bcdDevice_hi bDeviceClass bDeviceSubClass bDeviceProtocol bInterfaceClass bInterfaceSubClass bInterfaceProtocol driver_info
+#
+# SEIKO EPSON Corporation | Perfection  636 (GT-7000)
+iscan-device             0x0003   0x04b8   0x0101    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | GT-2200
+#scan-device             0x0003   0x04b8   0x0102    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection  610 (GT-6600)
+iscan-device             0x0003   0x04b8   0x0103    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection 1200 (GT-7600)
+iscan-device             0x0003   0x04b8   0x0104    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus Scan 2000
+#scan-device             0x0003   0x04b8   0x0105    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus Scan 2500
+iscan-device             0x0003   0x04b8   0x0106    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Expression 1600 (ES-2000)
+iscan-device             0x0003   0x04b8   0x0107    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Expression 1640 XL (ES-8500)
+iscan-device             0x0003   0x04b8   0x0109    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection 1640 (GT-8700)
+iscan-device             0x0003   0x04b8   0x010a    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection 1240 (GT-7700)
+iscan-device             0x0003   0x04b8   0x010b    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection  640 (GT-6700)
+iscan-device             0x0003   0x04b8   0x010c    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Expression 1680 (ES-2200)
+iscan-device             0x0003   0x04b8   0x010e    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection 1250 (GT-7200)
+iscan-device             0x0003   0x04b8   0x010f    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection 1650 (GT-8200)
+iscan-device             0x0003   0x04b8   0x0110    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection 2450 (GT-9700)
+iscan-device             0x0003   0x04b8   0x0112    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection  660
+#scan-device             0x0003   0x04b8   0x0114    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection 3170 (GT-9400)
+iscan-device             0x0003   0x04b8   0x0116    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection 4180 (GT-F600)
+iscan-device             0x0003   0x04b8   0x0118    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection 4490 (GT-X750)
+iscan-device             0x0003   0x04b8   0x0119    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection 2400 (GT-9300)
+iscan-device             0x0003   0x04b8   0x011b    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection 3200 (GT-9800)
+iscan-device             0x0003   0x04b8   0x011c    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection 1260 (GT-7300)
+iscan-device             0x0003   0x04b8   0x011d    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection 1660 (GT-8300)
+iscan-device             0x0003   0x04b8   0x011e    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection 1670
+#scan-device             0x0003   0x04b8   0x011f    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection 2480/2580 (GT-F500/F550)
+iscan-device             0x0003   0x04b8   0x0121    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection 3490/3590 (GT-F520/F570)
+iscan-device             0x0003   0x04b8   0x0122    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | GT-15000 (ES-7000)
+iscan-device             0x0003   0x04b8   0x0126    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection 4870 (GT-X700)
+iscan-device             0x0003   0x04b8   0x0128    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Expression 10000XL (ES-10000G)
+iscan-device             0x0003   0x04b8   0x0129    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection 4990 (GT-X800)
+iscan-device             0x0003   0x04b8   0x012a    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | GT-2500 (ES-H300)
+iscan-device             0x0003   0x04b8   0x012b    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection V700/V750 (GT-X900)
+iscan-device             0x0003   0x04b8   0x012c    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection V10/V100 (GT-S600/F650)
+iscan-device             0x0003   0x04b8   0x012d    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection V200 (GT-F670)
+iscan-device             0x0003   0x04b8   0x012e    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Perfection V350 (GT-F700)
+iscan-device             0x0003   0x04b8   0x012f    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus CX5100/5200 (CC-600)
+iscan-device             0x0003   0x04b8   0x0801    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus CX3100/3200 (CC-570)
+iscan-device             0x0003   0x04b8   0x0802    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus CX6300/6400
+iscan-device             0x0003   0x04b8   0x0805    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus Photo RX600
+iscan-device             0x0003   0x04b8   0x0806    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus Photo RX500/510
+iscan-device             0x0003   0x04b8   0x0807    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus CX5300/CX5400
+#scan-device             0x0003   0x04b8   0x0808    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus CX4500/4600
+iscan-device             0x0003   0x04b8   0x080d    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus CX3500/3600 (PX-A550)
+iscan-device             0x0003   0x04b8   0x080e    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus Photo RX420/425/430
+iscan-device             0x0003   0x04b8   0x080f    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus Photo RX700 (PM-A900)
+iscan-device             0x0003   0x04b8   0x0810    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus Photo RX620/630 (PM-A870)
+iscan-device             0x0003   0x04b8   0x0811    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus CX6500/CX6600
+iscan-device             0x0003   0x04b8   0x0813    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | (PM-A700)
+iscan-device             0x0003   0x04b8   0x0814    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | AcuLaser CX11 (LP-A500)
+iscan-device             0x0003   0x04b8   0x0815    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | (LP-M5500)
+iscan-device             0x0003   0x04b8   0x0817    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus CX3700/CX3800/DX3800
+iscan-device             0x0003   0x04b8   0x0818    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus CX4700/CX4800/DX4800 (PX-A650)
+iscan-device             0x0003   0x04b8   0x0819    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus Photo RX520/RX530 (PM-A750)
+iscan-device             0x0003   0x04b8   0x081a    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus Photo RX640/RX650 (PM-A890)
+iscan-device             0x0003   0x04b8   0x081c    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | (PM-A950)
+iscan-device             0x0003   0x04b8   0x081d    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus CX7700/CX7800
+iscan-device             0x0003   0x04b8   0x081f    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus CX4100/CX4200/DX4200
+iscan-device             0x0003   0x04b8   0x0820    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus Photo RX560/RX580/RX590 (PM-A820)
+iscan-device             0x0003   0x04b8   0x0827    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | PM-A970
+iscan-device             0x0003   0x04b8   0x0828    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | PM-T990
+iscan-device             0x0003   0x04b8   0x0829    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | PM-A920
+iscan-device             0x0003   0x04b8   0x082a    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus CX4900/CX5000/DX5000
+iscan-device             0x0003   0x04b8   0x082b    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus CX5900/CX6000/DX6000 (PX-A720)
+iscan-device             0x0003   0x04b8   0x082e    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus CX3900/DX4000 (PX-A620)
+iscan-device             0x0003   0x04b8   0x082f    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus CX2800/CX2900/ME200
+iscan-device             0x0003   0x04b8   0x0830    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | (LP-M5600)
+iscan-device             0x0003   0x04b8   0x0833    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | AcuLaser CX21
+iscan-device             0x0003   0x04b8   0x0835    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | (PM-T960)
+iscan-device             0x0003   0x04b8   0x0836    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus Photo RX680/RX685/RX690 (PM-A940)
+iscan-device             0x0003   0x04b8   0x0837    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus CX7300/CX7400/DX7400
+iscan-device             0x0003   0x04b8   0x0838    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus CX8300/CX8400/DX8400 (PX-A740)
+iscan-device             0x0003   0x04b8   0x0839    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus CX9300F/CX9400Fax/DX9400F
+iscan-device             0x0003   0x04b8   0x083a    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus Photo RX585/RX595/RX610 (PM-A840)
+iscan-device             0x0003   0x04b8   0x083c    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000
+# SEIKO EPSON Corporation | Stylus CX4300/CX4400/CX5500/CX5600/DX4400
+iscan-device             0x0003   0x04b8   0x083f    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00              0x00000000

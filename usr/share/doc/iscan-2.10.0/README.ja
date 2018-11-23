@@ -1,0 +1,255 @@
+Image Scan! for Linux 説明書
+
+Copyright (C) 2004--2007  SEIKO EPSON Corporation
+
+
+目次
+１　はじめに
+２　修正履歴  --> NEWS.jaファイルへ移動
+３　動作条件
+４　インストール方法
+５　起動方法
+６　オプション
+７　制限事項
+８　問題点
+
+
+１  はじめに
+
+Free Software Foundation と協議の結果、"Image Scan! for Linux"の構成お
+よび対象ライセンス内容を明示する必要があることが判明いたしましたので、
+以下の通り告知させていただきます。
+
+"Image Scan! for Linux" は、以下の構成となっています。
+
+  １．iscan		イメージをスキャンするプログラム
+  ２．libsane-epkowa	EPSON スキャナの改良版ドライバ
+  ３．libesmod		iscan 用の所有モジュール
+
+３のモジュールはオブジェクトコード形式のみ、non-free/EAPL.ja.txt
+に記載されている条件にて提供されます。
+このモジュールは GNU Lesser General Public License による glibc パッケー
+ジのライブラリへリンクする構成となります。
+
+`iscan' プログラムは GNU General Public License にて提供されます。ただ
+し、例外として、`libesmod' モジュールへリンクすることが許可されます。
+
+`libsane-epkowa' ドライバは SANE backend と同等の条件にてリリースされ
+ます。この SANE backend は、GNU General Public License に基づきますが、
+例外として、実行可能形式ファイルを作成するときに別のファイルへリンクす
+ることが許可されます。
+
+ファイル自体に別の記載がない限り、non-free/ ディレクトリ以下のその他の
+ファイルは全てセイコーエプソン株式会社の著作物であり、EPSON AVASYS Public
+License で配布されています。ライセンスの詳細は、non-free/EAPL.ja.txt
+を参照ください。
+
+GNU General Public License および GNU Lesser General Public License の
+内容は、ファイル `COPYING' および `COPYING.LIB' をご覧ください。
+
+`iscan' プログラムは、以下のスキャナをサポートします。
+
+ 　　　　　セイコーエプソン株式会社製フラットベッドスキャナ
+ 　　　　　・GT-6600U
+ 　　　　　・GT-6700U
+ 　　　　　・GT-7600S/GT-7600U/GT-7600UF
+ 　　　　　・GT-7700U
+ 　　　　　・GT-8300UF
+ 　　　　　・GT-8700/GT-8700F
+ 　　　　　・GT-8200U/GT-8200UF
+ 　　　　　・GT-9300UF
+ 　　　　　・GT-9700F
+ 　　　　　・GT-9800F
+ 　　　　　・GT-X700
+ 　　　　　・GT-X800
+ 　　　　　・GT-X900
+ 　　　　　・ES-2000
+ 　　　　　・ES-2200
+ 　　　　　・ES-8500
+ 　　　　　・ES-6000/ES-6000H/ES-6000HS
+ 　　　　　・ES-7000H
+ 　　　　　・ES-9000H
+ 　　　　　・ES-10000G
+ 　　　　　・ES-H300
+ 　　　　　・CC-600PX
+ 　　　　　・PM-A700
+ 　　　　　・PM-A750
+ 　　　　　・PM-A820
+ 　　　　　・PM-A840
+ 　　　　　・PM-A850
+ 　　　　　・PM-A870
+ 　　　　　・PM-A890
+ 　　　　　・PM-A900
+ 　　　　　・PM-A920
+ 　　　　　・PM-A940
+ 　　　　　・PM-A950
+ 　　　　　・PM-A970
+ 　　　　　・PM-T960
+ 　　　　　・PM-T990
+ 　　　　　・PX-A550
+ 　　　　　・PX-A620
+ 　　　　　・PX-A650
+ 　　　　　・PX-A720
+ 　　　　　・PX-A740
+ 　　　　　・LP-A500
+ 　　　　　・LP-M5500
+ 　　　　　・LP-M5600
+
+以下のスキャナは non-free モジュールによりサポートします。
+必要なモジュールを http://www.avasys.jp/linux/index.html からダウン
+ロードできます。
+
+ 　　　　　・GT-7200U
+ 　　　　　・GT-7300U
+ 　　　　　・GT-9400UF
+ 　　　　　・GT-F500
+ 　　　　　・GT-F520
+ 　　　　　・GT-F550
+ 　　　　　・GT-F570
+ 　　　　　・GT-F600
+ 　　　　　・GT-F650
+ 　　　　　・GT-F670
+ 　　　　　・GT-F700
+ 　　　　　・GT-S600
+ 　　　　　・GT-X750
+
+
+２　修正履歴
+
+    NEWS.jaファイルへ移動しました。
+
+
+３　動作条件
+
+・スキャナをUSB接続する場合、カーネル2.4.3以降が必要です。
+・GT-7200U、GT-7300Uを接続する場合、カーネル2.4.8以降が必要です。
+・ハードディスクには、最低でも取り込む画像データ容量の2倍以上の空き容量が
+  必要です。
+
+
+４　インストール方法
+
+注意: EPSON AVASYS Corporationが配布するRPMパッケージはRedHat 9で作成
+      しています。GIMP2対応のため、RHEL4のgimp-develを追加インストール
+      しています。
+
+Image Scan! for Linuxをインストールする前に次のパッケージが
+インストールされている必要があります。
+・sane-backends
+
+4-1　rpmファイルのインストール方法
+
+次のrpmコマンドを実行するとインストール完了です。
+
+  # rpm -i iscan-${version}-${release}.i386.rpm
+
+「${version}-${release}」はImage Scan! for Linuxのバージョンを表します。
+実際には、インストールするImage Scan! for Linuxのバージョンを入力して
+ください。例えば、iscan-1.5.1-5 をダウンロードした場合は ${version} が 
+1.5.1、${release} が 5 となります。
+
+ディストリビューションによっては依存性のエラーが出る場合がありますが
+次のコマンドを実行することで回避できる場合があります。
+
+  # rpm -i --nodeps iscan-${version}-${release}.i386.rpm
+
+古いバージョンがインストールされている場合は、次のコマンドを実行して
+アップグレードしてください。
+
+  # rpm -U iscan-${version}-${release}.i386.rpm
+
+rpmからインストールするためにはsaneがrpmファイルからインストール
+されている必要があります。
+
+4-2　tarファイルのインストール方法
+
+次のコマンドを実行するとインストール完了です。
+　# tar -zxvf iscan-${version}-${release}.tar.gz
+　# cd iscan-${version}
+　# ./configure
+　# make
+　# make install
+
+tarファイルからインストールするためにはsaneがtarファイルからインストール
+されている必要があります。
+
+
+５　起動方法
+
+次のコマンドを実行するとImage Scan! for Linuxが起動します。
+
+  $ iscan
+
+
+６　オプション
+
+Image Scan! for Linuxのバイナリパッケージをインストールするとiscanが
+GIMPプラグインとして登録されます。自動的に登録されない場合、または
+ソースコードからコンパイルした場合は、次のコマンドで登録できます。
+
+　$ ln -s /usr/bin/iscan ~/.gimp-1.2/plug-ins/
+
+.gimp-1.2の部分を利用するGIMPバージョンに合せてください。
+
+システムレベルで登録したい場合は、次のコマンドで登録できます。
+
+  # ln -s /usr/bin/iscan `gimptool --gimpplugindir`/plug-ins/
+
+GIMPが以下のようなメッセージを表示する可能性があります。
+
+  duplicate plug-in: "/usr/lib/gimp/1.2/plug-ins/iscan"
+
+その場合~/.gimp-1.2/plug-ins/iscanを削除すれば直ります。
+
+Image Scan! for Linuxから印刷を行うためには、PNGファイル形式を処理でき
+る印刷システムが必要です。CUPSやPhoto Image Print System（バージョン
+1.3.1以降）はこのようなシステムです。
+
+Photo Image Print Systemの最新バージョンは
+
+  http://www.avasys.jp/linux/
+
+系由でダウンロードできます。
+
+
+７  制限事項
+
+ 全機種
+ 　プレビュー表示エリアの取り込み枠は、8ピクセル(機種によっては
+ 　32ピクセル)の倍数で設定されます。
+ 　その為、お客様が指定した取り込み範囲とは多少異なる場合があります。
+
+ GT-F550/GT-F570
+ 　原稿台のみ御利用頂けます。
+
+ GT-F500/GT-F520/GT-F550/GT-F570
+ 　オプションのマルチフォトフィーダに対応しておりません。
+
+ GT-F700
+ 　オートフィルムローダオプションは未対応です。
+
+
+８　問題点
+
+======================================================================
+スキャン毎にプリンタ登録画面が表示される現象があります
+----------------------------------------------------------------------
+Fedora Core 6 において、本プログラムの操作中にプリンタ登録画面が何度も
+表示される現象を確認しています。
+
+対処方法：　
+　'hal-cups-utils' のパッケージをアップデートしてから、プリンタの登録
+　を行って下さい。
+
+対処手順：
+　1. `hal-cups-utils`パッケージのアップデートまたは、Fedora Core 6 の
+　   バージョンアップデートをを実施して下さい。
+  　 ※バージョン 0.6.9-1.fc6 で問題が解決されることを確認しています。
+　2. プリンタの登録を行って下さい。
+　   登録方法 1.
+　   　　プリンタ登録画面からプリンタの登録を行って下さい。
+　   登録方法 2.
+　   　　CUPS Webインタフェース等から行う場合、Device URIには `hal:///`
+　   　　から始まるデバイスURIを指定して下さい。
+
+======================================================================

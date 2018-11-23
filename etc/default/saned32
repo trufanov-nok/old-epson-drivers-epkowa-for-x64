@@ -1,0 +1,5 @@
+# Defaults for the saned32 initscript, from sane-utils:i386
+
+# Set to the user saned should run as
+RUN_AS_USER=saned
+RUN=yes

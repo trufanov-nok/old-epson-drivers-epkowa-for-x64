@@ -1,0 +1,387 @@
+NEWS -- an overview of user-visible changes with each release
+
+----------------------------------------------------------------------
+iscan-2.10.0                                              (2007-09-05)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - PM-A840
+   - PM-A940
+   - PM-T960
+   - PX-A740
+   - Stylus CX7300
+   - Stylus CX7400
+   - Stylus CX8300
+   - Stylus CX8400
+   - Stylus CX9300F
+   - Stylus CX9400Fax
+   - Stylus DX7400
+   - Stylus DX8400
+   - Stylus DX9400F
+   - Stylus Photo RX585
+   - Stylus Photo RX595
+   - Stylus Photo RX610
+   - Stylus Photo RX680
+   - Stylus Photo RX685
+   - Stylus Photo RX690
+
+----------------------------------------------------------------------
+iscan-2.9.0                                               (2007-07-26)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - Stylus CX4300
+   - Stylus CX4400
+   - Stylus CX5500
+   - Stylus CX5600
+   - Stylus DX4400
+
+----------------------------------------------------------------------
+iscan-2.8.0                                               (2007-05-29)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - GT-F670
+   - Perfection V200 PHOTO
+
+----------------------------------------------------------------------
+iscan-2.7.0                                               (2007-05-17)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - AcuLaser CX21
+ * fixes out-of-the-box support for the Stylus CX5300/CX5400
+ * fixes scanning failures with MFPs and all-in-ones
+
+----------------------------------------------------------------------
+iscan-2.6.0                                               (2007-03-07)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - PX-A620
+
+----------------------------------------------------------------------
+iscan-2.5.0                                               (2006-12-05)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - LP-M5600
+
+----------------------------------------------------------------------
+iscan-2.4.0                                               (2006-11-02)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - PM-T990
+   - Stylus Photo RX560
+   - Stylus Photo RX580
+   - Stylus Photo RX590
+
+----------------------------------------------------------------------
+iscan-2.3.0                                               (2006-09-11)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - GT-F650
+   - GT-F700 (AFL not supported)
+   - GT-S600
+   - PM-A820
+   - PM-A920
+   - PM-A970
+   - PX-A720
+   - Perfection V350 PHOTO (AFL not supported)
+   - Stylus CX3900
+   - Stylus CX4900
+   - Stylus CX5000
+   - Stylus CX5900
+   - Stylus CX6000
+   - Stylus DX4000
+   - Stylus DX5000
+   - Stylus DX6000
+
+----------------------------------------------------------------------
+iscan-2.2.0                                               (2006-08-11)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - ES-H300
+   - GT-2500
+   - ME200
+   - Stylus CX2800
+   - Stylus CX2900
+
+----------------------------------------------------------------------
+iscan-2.1.1                                               (2006-08-10)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - Perfection V10
+   - Perfection V100 PHOTO
+
+----------------------------------------------------------------------
+iscan-2.1.0                                               (2006-05-22)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - GT-X900
+   - PM-A890
+   - PM-A950
+   - Perfection V700
+   - Perfection V750
+   - Stylus CX4100
+   - Stylus CX4200
+   - Stylus CX4700
+   - Stylus CX4800
+   - Stylus DX4200
+   - Stylus DX4800
+   - Stylus Photo RX640
+   - Stylus Photo RX650
+ * adds udev support
+
+----------------------------------------------------------------------
+iscan-2.0.0                                               (2006-01-24)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - PM-A750
+   - PX-A650
+ * proprietary interpreter plugin modules and firmware files have been
+   removed from the source distribution
+
+----------------------------------------------------------------------
+iscan-1.18.0                                              (2005-09-16)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - GT-X750
+   - Perfection 4490 PHOTO
+
+----------------------------------------------------------------------
+iscan-1.17.0                                              (2005-08-05)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - GT-F520
+   - GT-F570 (flatbed only)
+   - Perfection 3490 PHOTO
+   - Perfection 3590 PHOTO (flatbed only)
+   - Stylus CX3700
+   - Stylus CX3800
+   - Stylus DX3800
+   - Stylus CX7700
+   - Stylus CX7800
+   - Stylus Photo RX520
+   - Stylus Photo RX530
+
+----------------------------------------------------------------------
+iscan-1.16.0                                              (2005-06-29)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - LP-M5500
+
+----------------------------------------------------------------------
+iscan-1.15.0                                              (2005-05-09)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - AcuLaser CX11
+   - LP-A500
+   - Stylus Photo RX700
+ * adds support for the GIMP 2.0 and 2.2
+ * compiles with GTK+ 2.x by default
+
+----------------------------------------------------------------------
+iscan-1.14.0                                              (2005-02-18)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - GT-F500
+   - GT-F550 (flatbed only)
+   - Perfection 2480 PHOTO
+   - Perfection 2580 PHOTO (flatbed only)
+ * adds USB hotplugging support
+ * fixes striping effect at the bottom of the scanner area for the
+   Perfection 610 and Perfection 640U
+
+----------------------------------------------------------------------
+iscan-1.13.1                                              (2005-01-20)
+----------------------------------------------------------------------
+ * cleans out the sources in non-free/
+ * fixes ADF sheet feeding for the GT-30000 and ES-9000H
+
+----------------------------------------------------------------------
+iscan-1.13.0                                              (2004-10-05)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - GT-X800
+   - PM-A900
+   - Perfection 4990 PHOTO
+   - Stylus Photo RX620
+   - Stylus Photo RX630
+ * fixes the inability to use the GT-9400UF and Perfection 3170 PHOTO
+   that was accidentally introduced with iscan-1.12.0
+
+----------------------------------------------------------------------
+iscan-1.12.0                                              (2004-08-05)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - GT-F600
+   - Perfection 4180 PHOTO
+
+----------------------------------------------------------------------
+iscan-1.11.0                                              (2004-07-22)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - PM-A700
+   - PM-A870
+   - PX-A550
+   - Stylus CX3500
+   - Stylus CX3600
+   - Stylus Photo RX420
+   - Stylus Photo RX425
+   - Stylus Photo RX430
+
+----------------------------------------------------------------------
+iscan-1.10.0                                              (2004-06-25)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - Stylus CX4500
+   - Stylus CX4600
+   - Stylus CX6500
+   - Stylus CX6600
+ * hides the Start button for scanners that don't have one
+
+----------------------------------------------------------------------
+iscan-1.9.0                                               (2004-05-17)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - ES-10000G
+   - Expression 10000XL
+ * adds Start button support
+ * adds JPEG file format support
+ * fixes crashes when previewing with A3 scanners under certain
+   conditions
+
+----------------------------------------------------------------------
+iscan-1.8.1                                               (2004-03-25)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - Stylus CX6300
+   - Stylus CX6400
+
+----------------------------------------------------------------------
+iscan-1.8.0                                               (2004-02-06)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - Stylus Photo RX500
+   - Stylus Photo RX510
+   - Stylus Photo RX600
+
+----------------------------------------------------------------------
+iscan-1.7.0                                               (2004-01-19)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - GT-X700
+   - Perfection 4870 PHOTO
+   - Stylus CX5100
+   - Stylus CX5200
+   - Stylus CX5300
+   - Stylus CX5400
+
+----------------------------------------------------------------------
+iscan-1.6.1                                               (2004-01-15)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - CC-600PX
+   - PM-A850
+
+----------------------------------------------------------------------
+iscan-1.6.0                                               (2003-12-09)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - ES-7000H
+   - GT-9400UF
+   - GT-15000
+   - Perfection 3170 PHOTO
+ * upgrades the SANE bits to sane-backends-1.0.12
+
+----------------------------------------------------------------------
+iscan-1.5.2                                               (2003-06-13)
+----------------------------------------------------------------------
+ * fixes ADF support for the GT-30000 and ES-9000H
+
+----------------------------------------------------------------------
+iscan-1.5.1                                               (2003-04-02)
+----------------------------------------------------------------------
+ * adds scanner selection support
+ * adds support for Auto-Document Feeder (ADF) units
+
+----------------------------------------------------------------------
+iscan-1.5.0                                               (2002-12-02)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - GT-9800F
+   - Perfection 3200 PHOTO
+
+----------------------------------------------------------------------
+iscan-1.4.0                                               (2002-07-22)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - GT-7300U
+   - GT-8300UF
+   - GT-9300UF
+   - Perfection 1260
+   - Perfection 1260 PHOTO
+   - Perfection 1660 PHOTO
+   - Perfection 2400 PHOTO
+
+----------------------------------------------------------------------
+iscan-1.3.0                                               (2002-06-10)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - GT-7200U
+   - Perfection 1250
+   - Perfection 1250 PHOTO
+ * improves support for colour and B&W document image types
+
+----------------------------------------------------------------------
+iscan-1.2.0                                               (2002-02-15)
+----------------------------------------------------------------------
+ * adds support for the following scanners:
+   - ES-6000
+   - ES-6000H
+   - ES-6000HS
+   - ES-9000H
+   - GT-6600U
+   - GT-6700U
+   - GT-7600S
+   - GT-7600U
+   - GT-7600UF
+   - GT-10000
+   - GT-10000+
+   - GT-30000
+   - Perfection  610
+   - Perfection  640U
+   - Perfection 1200S
+   - Perfection 1200U
+   - Perfection 1200U PHOTO
+
+----------------------------------------------------------------------
+iscan-1.1.0                                               (2001-12-07)
+----------------------------------------------------------------------
+ * adds message catalogs for Korean and Chinese (both Simplified and
+   Traditional)
+ * improves resolution selection options
+
+----------------------------------------------------------------------
+iscan-1.0.1                                               (2001-11-19)
+----------------------------------------------------------------------
+ * fixes size and colour differences between original and scanned
+   image for the Perfection 1650 and Perfection 1650 Photo
+
+----------------------------------------------------------------------
+iscan-1.0.0                                               (2001-10-22)
+----------------------------------------------------------------------
+ * initial release supporting the following scanners:
+   - ES-2000
+   - ES-2200
+   - ES-8500
+   - Expression 1600
+   - Expression 1640XL
+   - Expression 1680
+   - GT-7700U
+   - GT-8200U
+   - GT-8200UF
+   - GT-8700
+   - GT-8700F
+   - GT-9700F
+   - Perfection 1240U
+   - Perfection 1640SU
+   - Perfection 1640SU PHOTO
+   - Perfection 1650
+   - Perfection 1650 PHOTO
+   - Perfection 2450 PHOTO
