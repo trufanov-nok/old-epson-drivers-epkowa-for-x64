@@ -33,6 +33,12 @@
 namespace iscan
 {
 
+#if __GLIBC_PREREQ(2, 10)
+  typedef const dirent** dirtype;
+#else
+  typedef const void* dirtype;
+#endif
+
 imgstream::imgstream ()
   : imgstream_base_t (NULL), _fbuf (new filebuf (NULL)), _mine (true)
 {
@@ -183,7 +189,7 @@ imgstream::dlclose (dl_handle lib)
   return lt_dlclose (lib);
 }
 
-static int reversionsort (const void*, const void*);
+static int reversionsort (dirtype, dirtype);
 int selector (const dirent *);
 				// forward declarations
 
@@ -308,7 +314,7 @@ selector (const dirent *dir)
 //! The C library's versionsort() function in reverse.
 static
 int
-reversionsort (const void *a, const void *b)
+reversionsort (dirtype a, dirtype b)
 {
   return versionsort (b, a);
 }
