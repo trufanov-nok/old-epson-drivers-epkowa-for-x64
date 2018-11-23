@@ -10,3 +10,5 @@ Here you can find the instruction and the deb package that allows to work with 3
 
 The deb package contains Epkowa backend, set of 32-bit firmwares, 32-bit frontend iscan for testing purposes, a copy of 32-bit saned daemon which is renamed to saned32 and service registration files for it for systemd (currently used in Kubuntu 18.x).
 There is also a detailed instructions on how to install such drivers file by file that can be usful if you have a different 64-bit system.
+
+If you have Epson scanner and 64-bit system, but your scanner doesn't require additional 32-bit firmware, then you may just look for 64-bit epkowa backend (googl for `sane-backends-iscan-1.0.25-7.mga7.x86_64.rpm` or something like that) or try to use SANE's plustek backend which is default for such devices.
