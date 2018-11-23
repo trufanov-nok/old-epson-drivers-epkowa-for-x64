@@ -1,0 +1,58 @@
+#!/bin/sh
+# iscan-device -- modifies device permissions for supported devices
+# Copyright (C) 2005  SEIKO EPSON Corporation
+
+# This file is part of "Image Scan! for Linux".
+# You can redistribute it and/or modify it under the terms of the GNU
+# General Public License as published by the Free Software Foundation;
+# either version 2 of the License or at your option any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY;  without even the implied warranty of FITNESS
+# FOR A PARTICULAR PURPOSE or MERCHANTABILITY.
+# See the GNU General Public License for more details.
+#
+# You should have received a verbatim copy of the GNU General Public
+# License along with this program; if not, write to:
+#
+#      Free Software Foundation, Inc.
+#      59 Temple Place, Suite 330
+#      Boston, MA  02111-1307  USA
+
+
+# This script changes the permissions and ownership of a USB device
+# under /proc/bus/usb to grant access to the device to users.  This
+# will be done according to system policy wherever possible, but as
+# a fallback access will be granted to _all_ users.
+
+# Of course, fallback behaviour can be customised ;-)
+#
+DEFAULT_OWNER=root
+DEFAULT_GROUP=root
+DEFAULT_PERMS=0666
+
+# Rely on the sane-backends script (or a vendor specific script) if
+# available.  Distributors have probably modified it to suit system
+# policy.  Following is a list of scripts out there in the wild and
+# some notes on where they have been observed.
+#
+#   libusbscanner	sane-backends (>= 1.0.14)
+#   usbscanner		Mandrake 10
+#   desktopdev		SUSE 9.1 Pro
+#
+USB_SCRIPTS="libusbscanner
+             usbscanner
+             desktopdev
+            "
+for script in $USB_SCRIPTS; do
+    if [ -x $HOTPLUG_DIR/$TYPE/$script ]; then
+	exec $HOTPLUG_DIR/$TYPE/$script
+    fi
+done
+
+# Activate fallback settings
+#
+if [ "$ACTION" == add -a "$TYPE" == "usb" ]; then
+    chown $DEFAULT_OWNER:$DEFAULT_GROUP "$DEVICE"
+    chmod $DEFAULT_PERMS "$DEVICE"
+fi

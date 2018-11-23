@@ -1,0 +1,46 @@
+#  control -- information about source and binary packages
+#  Copyright (C) 2007  EPSON AVASYS Corporation
+#
+#  This file is part of the "Image Scan!" build infra-structure.
+#
+#  The "Image Scan!" build infra-structure is free software.
+#  You can redistribute it and/or modify it under the terms of the GNU
+#  General Public License as published by the Free Software Foundation;
+#  either version 2 of the License or at your option any later version.
+#
+#  This program is distributed in the hope that it will be useful, but
+#  WITHOUT ANY WARRANTY;  without even the implied warranty of FITNESS
+#  FOR A PARTICULAR PURPOSE or MERCHANTABILITY.
+#  See the GNU General Public License for more details.
+#
+#  You should have received a verbatim copy of the GNU General Public
+#  License along with this program; if not, write to:
+#
+#	 Free Software Foundation, Inc.
+#	 59 Temple Place, Suite 330
+#	 Boston, MA  02111-1307	 USA
+
+
+Source: iscan
+Section: non-free/graphics
+Priority: extra
+Maintainer: EPSON AVASYS Corporation <pipsnews@avasys.jp>
+Build-Depends: cdbs, debhelper (>= 5.0.42), libsane-dev, libltdl3-dev, libgtk2.0-dev, libpng-dev, libjpeg-dev, libgimp2.0-dev
+Standards-Version: 3.7.2
+
+Package: iscan
+Architecture: i386
+Depends: ${shlibs:Depends}
+Recommends: gimp
+Conflicts: libsane-extras
+Description: simple, easy to use scanner utility for EPSON scanners
+ Image Scan! is a graphical scanner utility for people that do not need
+ all the bells and whistles provided by several of the other utilities
+ out there (xsane, QuiteInsane, Kooka).
+ .
+ At the moment it only supports SEIKO EPSON scanners and all-in-ones.
+ However, the scanner driver it provides can be used by any other SANE
+ standard compliant scanner utility.
+ .
+ Note that several scanners require a non-free plugin before they can
+ be used with this software.

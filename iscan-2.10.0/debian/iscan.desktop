@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Categories=GTK;Application;Graphics;RasterGraphics;Scanning;
+
+Name=Image Scan!
+Comment=
+
+Exec=iscan
+Terminal=false

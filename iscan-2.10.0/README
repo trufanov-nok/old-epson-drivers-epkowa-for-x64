@@ -1,0 +1,262 @@
+Image Scan! for Linux Description 
+
+Copyright (C) 2004--2007  SEIKO EPSON Corporation
+
+
+Contents
+1   Preamble
+2   Version Up Record  --> moved to NEWS file
+3   Operating Condition
+4   Installation Method
+5   Running the Software
+6   Options
+7   Limitations
+8   Known problems
+
+
+1  Preamble
+
+During our contact with the Free Software Foundation to straighten out
+the licensing problems with "Image Scan! for Linux" we noticed that we
+needed to clear up what parts are distributed under which conditions.
+Here is an attempt.
+
+"Image Scan! for Linux" contains the following parts:
+
+  iscan			the program you use to scan your images
+  libsane-epkowa	an improved driver for EPSON scanners
+  libesmod		a proprietary module used by iscan
+
+The latter module is provided (in object code form only) under the
+terms of the license agreement provided in `non-free/EAPL.en.txt'.
+The module is linked against libraries from the `glibc' package
+which is covered by the GNU Lesser General Public License.
+
+The `iscan' program is covered by the GNU General Public License with
+a special exception that allows linking with the `libesmod' module.
+
+The libsane-epkowa driver is released under the same conditions as
+the SANE backends, that is under the GNU General Public License with a
+special exception that allows linking a SANE library with other files
+to produce an executable.
+
+Unless explicitly noted otherwise in the file itself, all other files
+in the non-free/ directory are copyright SEIKO EPSON Corporation and
+distributed under the terms of the EPSON AVASYS Public License (see
+non-free/EAPL.en.txt).
+
+Copies of the GNU General Public License and the GNU Lesser General
+Public License can be found in the files `COPYING' and `COPYING.LIB',
+respectively.
+
+The `iscan' program supports the following scanners:
+
+            Seiko Epson Flatbed Scanner
+            - Perfection 610
+            - Perfection 640U
+            - Perfection 1200S/Perfection 1200U/Perfection 1200U PHOTO
+            - Perfection 1240U
+            - Perfection 1660 PHOTO
+            - Perfection 1640SU/Perfection 1640SU PHOTO
+            - Perfection 1650/Perfection 1650 PHOTO
+            - Perfection 2400 PHOTO
+            - Perfection 2450 PHOTO
+            - Perfection 3200 PHOTO
+            - Perfection 4870 PHOTO
+            - Perfection 4990 PHOTO
+            - Perfection V700
+            - Perfection V750
+            - Expression 1600
+            - Expression 1680
+            - Expression 1640XL
+            - Expression 10000XL
+            - GT-2500
+            - GT-10000/GT-10000+
+            - GT-15000
+            - GT-30000
+            - ME200
+            - Stylus CX2800/Stylus CX2900
+            - Stylus CX3500/Stylus CX3600
+            - Stylus CX3700/Stylus CX3800/Stylus DX3800
+            - Stylus CX3900/Stylus DX4000
+            - Stylus CX4100/Stylus CX4200/Stylus DX4200
+            - Stylus CX4500/Stylus CX4600
+            - Stylus CX4700/Stylus CX4800/Stylus DX4800
+            - Stylus CX4900/Stylus CX5000/Stylus DX5000
+            - Stylus CX5100/Stylus CX5200
+            - Stylus CX5300/Stylus CX5400
+            - Stylus CX5900/Stylus CX6000/Stylus DX6000
+            - Stylus CX6300/Stylus CX6400
+            - Stylus CX6500/Stylus CX6600
+            - Stylus CX7300/Stylus CX7400/Stylus DX7400
+            - Stylus CX7700/Stylus CX7800
+            - Stylus CX8300/Stylus CX8400/Stylus DX8400
+            - Stylus CX9300F/Stylus CX9400Fax/Stylus DX9400F
+            - Stylus Photo RX420/Stylus Photo RX425/Stylus Photo RX430
+            - Stylus Photo RX500/Stylus Photo RX510
+            - Stylus Photo RX520/Stylus Photo RX530
+            - Stylus Photo RX560/Stylus Photo RX580/Stylus Photo RX590
+            - Stylus Photo RX600
+            - Stylus Photo RX620/Stylus Photo RX630
+            - Stylus Photo RX640/Stylus Photo RX650
+            - Stylus Photo RX700
+            - Stylus Photo RX585/Stylus Photo RX595/Stylus Photo RX610
+            - Stylus Photo RX680/Stylus Photo RX685/Stylus Photo RX690
+            - AcuLaser CX11
+            - AcuLaser CX21
+
+A number of non-free plugins are available separately that provide
+support for the following scanners:
+
+            - Perfection 1250/Perfection 1250 PHOTO
+            - Perfection 1260/Perfection 1260 PHOTO
+            - Perfection 2480 PHOTO
+            - Perfection 2580 PHOTO
+            - Perfection 3170 PHOTO
+            - Perfection 3490 PHOTO
+            - Perfection 3590 PHOTO
+            - Perfection 4180 PHOTO
+            - Perfection 4490 PHOTO
+            - Perfection V10
+            - Perfection V100 PHOTO
+            - Perfection V200 PHOTO
+            - Perfection V350 PHOTO
+            - Stylus CX4300/CX4400/CX5500/CX5600/DX4400
+
+The required modules can be downloaded via:
+
+  http://www.avasys.jp/english/linux_e/index.html
+
+
+2  Version Up Record
+
+   [moved to NEWS file]
+
+
+3  Operating Condition
+
+- Kernel 2.4.3 or later is required when connecting your scanner by USB.
+- Kernel 2.4.8 or later is required when connecting Perfection 1250/
+  Perfection 1250 PHOTO and Perfection 1260/Perfection 1260 PHOTO.
+- The hard disk requires at least double size of an image data size to
+  be scanned.
+
+
+4  Installation Method
+
+It is required that the following packages are installed previous to 
+the installation of Image Scan! for Linux.
+ - sane-backends
+
+4-1  Installing a rpm file
+
+NOTE: The RPMs provided by EPSON AVASYS Corporation have been built on
+      RedHat 9 with gimp-devel from RHEL4 added for GIMP2 support.
+
+Execute the following rpm command to complete the installation.
+
+  # rpm -i iscan-${version}-${release}.i386.rpm
+
+where you should substitute the version of your Image Scan! for Linux
+for ${version}-${release}.  So, if you downloaded iscan-1.5.1-5, then
+the ${version} part would be 1.5.1 and the ${release} part would be 5.
+
+Depending on the distribution, dependency errors may occur. 
+Running the following command will suppress dependency checks,
+and complete the installation.
+
+  # rpm -i --nodeps iscan-${version}-${release}.i386.rpm
+
+If an old version of Image Scan! for Linux  exists, 
+run the following command and update to the latest version.
+
+  # rpm -U iscan-${version}-${release}.i386.rpm
+
+Note that the installation of Image Scan! for Linux from rpm requires 
+that sane has been installed from rpm as well.
+
+4-2  Installing a tar file
+
+Execute the following command to complete the installation.
+
+  # tar -zxvf iscan-${version}-${release}.tar.gz
+  # cd iscan-${version}
+  # ./configure
+  # make
+  # make install
+
+Note that the installation of Image Scan! for Linux from tar requires 
+that sane has been installed from tar as well.
+
+
+5  Running the Software
+
+At the command prompt, execute the following command to
+start Image Scan! for Linux.
+
+  $ iscan 
+
+
+6  Options
+
+Normally, installating a binary package will register iscan as a GIMP
+plugin.  In case this did not happen, or you compiled and installed
+iscan from source, you can register it as a plugin yourself with the
+following command:
+
+  $ ln -s /usr/bin/iscan ~/.gimp-1.2/plug-ins/
+
+Adjust the version number to match the version of the GIMP that you
+use (and /usr/bin to wherever iscan was installed).  If you want to
+make it available system wide, you can do that with:
+
+  # ln -s /usr/bin/iscan `gimptool --gimpplugindir`/plug-ins/
+
+If the GIMP complains something like
+
+  duplicate plug-in: "/usr/lib/gimp/1.2/plug-ins/iscan"
+
+Just remove ~/.gimp-1.2/plug-ins/iscan and all should be fine.
+
+In order to print from directly from Image Scan! for Linux, your print
+system needs to be able to handle the PNG file format directly.  CUPS
+does this by default.  Furthermore, Photo Image Print System, versions
+1.3.1 and later, will also work out of the box.
+
+The latest version of Photo Image Print System can be downloaded via:
+
+  http://www.avasys.jp/english/linux_e/
+
+
+7  Limitations
+
+ All models
+  - marquee sizes can only be set at multiples of 8 (in rare cases 32)
+
+ Perfection 2480 PHOTO / Perfection 3490 PHOTO
+  - the multi photo feeder (MPF) option is not supported
+
+ Perfection 2580 PHOTO / Perfection 3590 PHOTO
+  - only scanning from the flatbed is supported
+  - the multi photo feeder (MPF) option is not supported
+
+ Perfection V350 PHOTO
+  - the auto film loader (AFL) option is not supported
+
+
+8 Known problems
+
+======================================================================
+ - A printer configuration dialog keeps appearing after every single
+   scan action.
+----------------------------------------------------------------------
+ + This has been confirmed on FC6 and you can fix the problem with an
+   upgrade of the `hal-cups-utils` package.  Version 0.6.9-1.fc6 has
+   been confirmed to solve it.
+   You will need to configure the printer part of the device to use a
+   HAL device URI, that is, something that starts with `hal:///` (of
+   course without the quotes), via the CUPS web interface or Fedora's
+   `system-config-printer` utility.  If you can configure the printer
+   via the `Specify Printer Driver` dialog, that should also work and
+   is probably easier for most.
+======================================================================

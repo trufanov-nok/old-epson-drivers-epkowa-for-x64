@@ -1,0 +1,366 @@
+# zh_CN.po - simplified Chinese message strings for Image Scan!
+# Copyright (C) 2003  SEIKO EPSON Corporation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: iscan 1.9.0\n"
+"Report-Msgid-Bugs-To: pipsnews@avasys.jp\n"
+"POT-Creation-Date: 2007-09-13 04:40+0000\n"
+"PO-Revision-Date: 2004-05-13 06:30+0900\n"
+"Last-Translator: Meng Bo\n"
+"Language-Team: Chinese (Simplified)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: frontend/file-selector.cc:898
+msgid "Save Options"
+msgstr "保存设置"
+
+#: frontend/file-selector.cc:907
+msgid "Determine File Type:"
+msgstr "确定文件类型"
+
+#: frontend/file-selector.cc:962
+msgid "Start filing at:"
+msgstr "起始号"
+
+#: frontend/file-selector.cc:981
+msgid "Number of digits:"
+msgstr "号码位数"
+
+#: frontend/file-selector.cc:1049 frontend/pisa_view_manager.cc:1434
+msgid "  Yes  "
+msgstr "  是  "
+
+#: frontend/file-selector.cc:1049 frontend/pisa_view_manager.cc:1434
+msgid "  No  "
+msgstr "  否  "
+
+#: frontend/pisa_aleart_dialog.cc:73 frontend/pisa_configuration.cc:204
+#: frontend/pisa_scan_selector.cc:201
+msgid "  OK  "
+msgstr "  确定  "
+
+#: frontend/pisa_configuration.cc:113
+msgid "Configuration"
+msgstr "配置"
+
+#: frontend/pisa_configuration.cc:163
+msgid "Print Command"
+msgstr "打印命令"
+
+#: frontend/pisa_configuration.cc:186
+msgid ""
+"In order to print, your print system must be able to handle the PNG file "
+"format directly.  CUPS or Photo Image Print System (versions 1.3.1 or later) "
+"do this by default."
+msgstr ""
+
+#: frontend/pisa_configuration.cc:214 frontend/pisa_progress_window.cc:61
+#: frontend/pisa_scan_selector.cc:215 frontend/pisa_view_manager.cc:937
+msgid "  Cancel  "
+msgstr "  取消  "
+
+#: frontend/pisa_error.cc:56
+msgid "Operation completed succesfully."
+msgstr ""
+
+#: frontend/pisa_error.cc:58
+msgid "Operation is not supported."
+msgstr ""
+
+#: frontend/pisa_error.cc:60
+msgid "Operation was cancelled."
+msgstr ""
+
+#: frontend/pisa_error.cc:62
+msgid "Device is busy---retry later."
+msgstr ""
+
+#: frontend/pisa_error.cc:64
+msgid "Data or argument is invalid."
+msgstr ""
+
+#: frontend/pisa_error.cc:66
+msgid "No more data available (end-of-file)."
+msgstr ""
+
+#: frontend/pisa_error.cc:68
+msgid ""
+"A paper jam occured.  Open the Automatic Document Feeder and remove any "
+"paper."
+msgstr "卡纸。打开自动文稿送纸器并且移除所卡纸张。"
+
+#: frontend/pisa_error.cc:71
+msgid "Please load the document(s) into the Automatic Document Feeder."
+msgstr "请在自动文稿送纸器中放入文稿。"
+
+#: frontend/pisa_error.cc:74
+msgid ""
+"The automatic document feeder or scanner unit is open.\n"
+"Please close it."
+msgstr ""
+"自动文稿送纸器或扫描仪被打开。\n"
+"请关闭它。"
+
+#: frontend/pisa_error.cc:77
+msgid "Error during device I/O."
+msgstr ""
+
+#: frontend/pisa_error.cc:79
+msgid "Out of memory."
+msgstr ""
+
+#: frontend/pisa_error.cc:81
+msgid "Access to resource has been denied."
+msgstr ""
+
+#: frontend/pisa_error.cc:84
+msgid "There is not enough disk space for operation"
+msgstr "没有充足的磁盘空间运行"
+
+#: frontend/pisa_error.cc:87
+msgid ""
+"Could not send command to scanner.\n"
+"Check the scanner's status."
+msgstr ""
+"不能发送指令到扫描仪。\n"
+"请检查扫描仪状态。"
+
+#: frontend/pisa_error.cc:91
+msgid "Scanner model not supported"
+msgstr "不支持这种扫描仪模型"
+
+#: frontend/pisa_error.cc:94
+msgid ""
+"Selected area is too large for this resolution.\n"
+"Reduce the selected area or resolution."
+msgstr ""
+"对于该分辨率被选区域过大。\n"
+"请缩小被选区域或降低分辨率。"
+
+#: frontend/pisa_error.cc:98 frontend/pisa_error.cc:101
+msgid "Could not create file"
+msgstr "不能创建文件"
+
+#: frontend/pisa_error.cc:104 frontend/pisa_view_manager.cc:1433
+msgid "Overwrite?"
+msgstr "替换？"
+
+#: frontend/pisa_error.cc:107
+msgid ""
+"The Image Type setting you selected cannot be used with this resolution.\n"
+"Reduce the Resolution or Scale setting."
+msgstr "您选择的图像类型设置不能使用此分辨率，请降低分辨率或比例设置。"
+
+#: frontend/pisa_error.cc:115
+msgid "Unexpected error occurred"
+msgstr "出现意外错误"
+
+#: frontend/pisa_gamma_correction.cc:146
+msgid "Tone Correction"
+msgstr "色调校正"
+
+#: frontend/pisa_gamma_correction.cc:494
+msgid "  Reset  "
+msgstr "  重置  "
+
+#: frontend/pisa_image_controls.cc:152
+msgid "Image Controls"
+msgstr "图像控制"
+
+#: frontend/pisa_image_controls.cc:208
+msgid "Gamma:"
+msgstr "Gamma:"
+
+#: frontend/pisa_image_controls.cc:223
+msgid "Highlight:"
+msgstr "高光:"
+
+#: frontend/pisa_image_controls.cc:238
+msgid "Shadow:"
+msgstr "阴影:"
+
+#: frontend/pisa_image_controls.cc:253
+msgid "Threshold:"
+msgstr "阈值:"
+
+#: frontend/pisa_main_window.cc:457
+msgid "File"
+msgstr "文件"
+
+#: frontend/pisa_main_window.cc:458
+msgid "Printer"
+msgstr "打印机"
+
+#: frontend/pisa_main_window.cc:461
+msgid "Flatbed"
+msgstr "平板"
+
+#: frontend/pisa_main_window.cc:462
+msgid "TPU for Neg.Film"
+msgstr "透明负胶片"
+
+#: frontend/pisa_main_window.cc:463
+msgid "TPU for Pos.Film"
+msgstr "透明正胶片"
+
+#: frontend/pisa_main_window.cc:464
+msgid "Auto Document Feeder"
+msgstr "自动文稿送纸器"
+
+#: frontend/pisa_main_window.cc:467
+msgid "Color Photo"
+msgstr "彩色照片"
+
+#: frontend/pisa_main_window.cc:468
+msgid "Color Document"
+msgstr "彩色文档"
+
+#: frontend/pisa_main_window.cc:469
+msgid "Black & White Photo"
+msgstr "黑白照片"
+
+#: frontend/pisa_main_window.cc:470
+msgid "Black & White Document"
+msgstr "黑白文档"
+
+#: frontend/pisa_main_window.cc:471
+msgid "Line Art"
+msgstr "线画"
+
+#: frontend/pisa_main_window.cc:486
+msgid "inches"
+msgstr "英寸"
+
+#: frontend/pisa_main_window.cc:487
+msgid "pixels"
+msgstr "像素"
+
+#: frontend/pisa_main_window.cc:488
+msgid "cm"
+msgstr "厘米"
+
+#: frontend/pisa_main_window.cc:656
+msgid "Preview"
+msgstr "预览"
+
+#: frontend/pisa_main_window.cc:667
+msgid "Zoom"
+msgstr "缩放"
+
+#: frontend/pisa_main_window.cc:679
+msgid "Auto Exposure"
+msgstr "自动曝光"
+
+#: frontend/pisa_main_window.cc:716
+msgid "Destination:"
+msgstr "目标设备:"
+
+#: frontend/pisa_main_window.cc:728
+msgid "Scan"
+msgstr "扫描"
+
+#: frontend/pisa_main_window.cc:741
+msgid "enable Start button"
+msgstr "可使用[开始按钮]"
+
+#: frontend/pisa_main_window.cc:799 frontend/pisa_scan_selector.cc:144
+msgid "Scanner:"
+msgstr "扫描仪"
+
+#: frontend/pisa_main_window.cc:821
+msgid "  Document  "
+msgstr "  文稿  "
+
+#: frontend/pisa_main_window.cc:829
+msgid "  Adjust  "
+msgstr "  调整  "
+
+#: frontend/pisa_main_window.cc:866
+msgid "Document Source:"
+msgstr "文稿来源:"
+
+#: frontend/pisa_main_window.cc:888
+msgid "Image Type:"
+msgstr "图像类型:"
+
+#: frontend/pisa_main_window.cc:901
+msgid "Resolution:"
+msgstr "分辨率:"
+
+#: frontend/pisa_main_window.cc:914
+msgid "Unsharp mask"
+msgstr "锐化图像"
+
+#: frontend/pisa_main_window.cc:954
+msgid "Target"
+msgstr "扫描图像"
+
+#: frontend/pisa_main_window.cc:965
+msgid "W:"
+msgstr "宽:"
+
+#: frontend/pisa_main_window.cc:977
+msgid "H:"
+msgstr "高:"
+
+#: frontend/pisa_main_window.cc:1007
+msgid "Scale"
+msgstr "比例"
+
+#: frontend/pisa_main_window.cc:1033
+msgid "Focus"
+msgstr "聚焦"
+
+#: frontend/pisa_main_window.cc:1108
+msgid "  Configuration  "
+msgstr "  配置  "
+
+#: frontend/pisa_main_window.cc:1116
+msgid "  Close  "
+msgstr "  关闭  "
+
+#: frontend/pisa_progress_window.cc:62 frontend/pisa_view_manager.cc:947
+msgid "  Finish  "
+msgstr "  完成  "
+
+#: frontend/pisa_progress_window.cc:162
+msgid "Scanner is warming up. Please wait..."
+msgstr "扫描仪正在预热。请稍候…"
+
+#: frontend/pisa_progress_window.cc:165
+msgid "Pre-scanning in Progress"
+msgstr "正在预览…"
+
+#: frontend/pisa_progress_window.cc:168
+msgid "Scanning in Progress"
+msgstr "正在扫描…"
+
+#: frontend/pisa_progress_window.cc:171
+msgid ""
+"Starting a sequence of scans.\n"
+"Press to scanner's Start button to start each scan."
+msgstr ""
+"开始一个扫描序列。\n"
+"按下扫描仪上的[开始按钮]开始每个扫描工作。"
+
+#: frontend/pisa_scan_selector.cc:105
+msgid "Scan Selector Dialog"
+msgstr ""
+
+#: frontend/pisa_scan_selector.cc:165
+msgid "  Update  "
+msgstr "  更新  "
+
+#: frontend/pisa_view_manager.cc:937
+msgid "  Continue  "
+msgstr "  继续  "
+
+#~ msgid ""
+#~ "In order to print, you must have an EPSON Photo Image Print System v1.3.1 "
+#~ "or greater  printer driver installed on your system."
+#~ msgstr ""
+#~ "为了打印，你必须已经在你的系统中安装了１.３.１或更高版本的　EPSON Photo "
+#~ "Image　Print　System　打印机驱动程序。"

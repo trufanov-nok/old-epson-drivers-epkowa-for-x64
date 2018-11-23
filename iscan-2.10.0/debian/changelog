@@ -1,0 +1,17 @@
+iscan (2.10.0-1) unstable; urgency=low
+
+  * new "upstream"
+
+ -- EPSON AVASYS Corporation <pipsnews@avasys.jp>  Wed,  5 Sep 2007 17:48:42 +0900
+
+iscan (2.9.0) unstable; urgency=low
+
+  * new "upstream"
+
+ -- EPSON AVASYS Corporation <pipsnews@avasys.jp>  Thu, 26 Jul 2007 17:41:15 +0900
+
+iscan (2.8.0) unstable; urgency=low
+
+  * initial release
+
+ -- EPSON AVASYS Corporation <pipsnews@avasys.jp>  Tue, 29 May 2007 10:20:05 +0900

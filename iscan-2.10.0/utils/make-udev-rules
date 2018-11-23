@@ -1,0 +1,151 @@
+#! /bin/sh
+#  make-udev-rules -- creates udev rules from hotplug match info
+#  Copyright (C) 2006, 2007  SEIKO EPSON Corporation
+
+#  This file is part of "Image Scan! for Linux".
+#  You can redistribute it and/or modify it under the terms of the GNU
+#  General Public License as published by the Free Software Foundation;
+#  either version 2 of the License or at your option any later version.
+#
+#  This program is distributed in the hope that it will be useful, but
+#  WITHOUT ANY WARRANTY;  without even the implied warranty of FITNESS
+#  FOR A PARTICULAR PURPOSE or MERCHANTABILITY.
+#  See the GNU General Public License for more details.
+#
+#  You should have received a verbatim copy of the GNU General Public
+#  License along with this program; if not, write to:
+#
+#      Free Software Foundation, Inc.
+#      59 Temple Place, Suite 330
+#      Boston, MA  02111-1307  USA
+
+
+USERMAP=${1}			# location of iscan.usermap
+RULEDIR=${2:-/etc/udev/rules.d}
+
+TEMPLATE='SYSFS{idVendor}=="04b8", SYSFS{idProduct}=="HHHH", MODE="0666"'
+SUB_SYST='usb_device'
+
+#  Convenience functions.
+
+usage () {
+    cat <<EOF
+Usage: make-udev-rules FILE [UDEV_RULES_DIR]
+Creates a udev rules file using the hotplug match information found
+in FILE.  The UDEV_RULES_DIR is searched for SANE related files for
+use in rule template generation.  It defaults to /etc/udev/rules.d.
+A rules file will be written to *iscan.rules in UDEV_RULES_DIR.
+
+Setting the DEBUG environment variable to a non-empty string can be
+used to divert the rules to standard output instead.
+EOF
+}
+
+debug () {
+    test x$DEBUG != x || return 0
+    echo DBG: $* >&2
+}
+
+get_usb_product_ids () {
+    sed 's/#.*//; /^[[:space:]]*$/d' $USERMAP \
+	| awk '{print $4}' \
+	| sed 's/0x//' \
+	| tr '\n' ' '
+}
+
+#  Although this function takes line continuation into account, it
+#  does assume that SYSFS{idVendor} is on the first line.
+#
+get_template_rule () {
+    sed -n 's/#.*//; /^[[:space:]]*$/d
+    /SYSFS{idVendor}=\{1,2\}"04[bB]8"/{
+    /\\$/N
+    s/\\\n//
+    p
+    q
+    }' $* \
+	| sed 's/\(SYSFS{idProduct}=\{1,2\}\)"[[:xdigit:]]\{4\}"/\1"HHHH"/'
+}
+
+#  Heavily based on get_template_rule (), this tries to find the name
+#  that is used by udev for the USB subsystem.  Unfortunately not all
+#  distributions (kernel/udev versions?) use the same name.
+#
+get_sub_syst_name () {
+    sed -n 's/#.*//; /^[[:space:]]*$/d
+    /SUBSYSTEM!\{,1\}=\{1,2\}"usb.*"/{
+    p
+    q
+    }' $* \
+	| sed 's/.*SUBSYSTEM!\{,1\}=\{1,2\}"\([^"]*\)".*/\1/'
+}
+
+#  WARNING: this heavily relies on the fact that we only try existing
+#  rules files that match lib*.rules.
+#
+get_out_file_name () {
+    ls $* | sed 's/lib[^.]*/iscan/'
+}
+
+#  Sanity tests.
+
+if test -z "$USERMAP"; then
+    usage
+    exit 1
+fi
+
+LC_ALL=C			# sanitise environment a bit
+RULEDIR=${RULEDIR%%/}
+
+prod_ids="`get_usb_product_ids`"
+test -n "$prod_ids" || exit 1
+
+template=
+out_file=
+for rules in \
+    libsane.rules \
+    libusbscanner.rules \
+    ; do
+    template="`get_template_rule $RULEDIR/*$rules 2>/dev/null`"
+    sub_syst="`get_sub_syst_name $RULEDIR/*$rules 2>/dev/null`"
+    out_file="`get_out_file_name $RULEDIR/*$rules 2>/dev/null`"
+    test -n "$template" && break
+done
+debug "Using template from $RULEDIR/*$rules"
+
+if test -z "$template"; then
+    template="$TEMPLATE"
+    out_file=$RULEDIR/60_iscan.rules
+fi
+if test -z "$sub_syst"; then
+    sub_syst="$SUB_SYST"
+fi
+
+if test x$DEBUG != x; then
+    debug "Would have sent output to $out_file"
+else				# better make sure
+    test -d $RULEDIR || mkdir -p $RULEDIR
+    exec 1> $out_file
+fi
+
+
+cat <<EOF
+# This file is part of the "Image Scan! for Linux" binary package (or
+# generated automatically as part of its installation).  Any changes
+# will be overwritten with each upgrade of the package.
+
+ACTION!="add", GOTO="iscan_rules_end"
+SUBSYSTEM!="$sub_syst", GOTO="iscan_rules_end"
+
+EOF
+
+for id in $prod_ids; do
+    echo $template | sed "s,HHHH,$id,"
+done
+
+cat <<EOF
+
+LABEL="iscan_rules_end"
+EOF
+
+exit 0

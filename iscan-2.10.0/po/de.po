@@ -1,0 +1,372 @@
+#  de.po -- German translations for `iscan' messages
+#  Copyright (C) 2003  SEIKO EPSON Corporation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: iscan 1.9.0\n"
+"Report-Msgid-Bugs-To: pipsnews@avasys.jp\n"
+"POT-Creation-Date: 2007-09-13 04:40+0000\n"
+"PO-Revision-Date: 2004-05-13 06:36+0900\n"
+"Last-Translator: unknown\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: frontend/file-selector.cc:898
+msgid "Save Options"
+msgstr "Einstellungen"
+
+#: frontend/file-selector.cc:907
+msgid "Determine File Type:"
+msgstr "Dateityp bestimmen:"
+
+#: frontend/file-selector.cc:962
+msgid "Start filing at:"
+msgstr "Dateinamenen beginnen mit"
+
+#: frontend/file-selector.cc:981
+msgid "Number of digits:"
+msgstr "Anzahl Zeichen"
+
+#: frontend/file-selector.cc:1049 frontend/pisa_view_manager.cc:1434
+msgid "  Yes  "
+msgstr "  Ja  "
+
+#: frontend/file-selector.cc:1049 frontend/pisa_view_manager.cc:1434
+msgid "  No  "
+msgstr "  Nein  "
+
+#: frontend/pisa_aleart_dialog.cc:73 frontend/pisa_configuration.cc:204
+#: frontend/pisa_scan_selector.cc:201
+msgid "  OK  "
+msgstr "  OK  "
+
+#: frontend/pisa_configuration.cc:113
+msgid "Configuration"
+msgstr "Konfiguration"
+
+#: frontend/pisa_configuration.cc:163
+msgid "Print Command"
+msgstr "Druckbefehl"
+
+#: frontend/pisa_configuration.cc:186
+msgid ""
+"In order to print, your print system must be able to handle the PNG file "
+"format directly.  CUPS or Photo Image Print System (versions 1.3.1 or later) "
+"do this by default."
+msgstr ""
+
+#: frontend/pisa_configuration.cc:214 frontend/pisa_progress_window.cc:61
+#: frontend/pisa_scan_selector.cc:215 frontend/pisa_view_manager.cc:937
+msgid "  Cancel  "
+msgstr "  Abbrechen  "
+
+#: frontend/pisa_error.cc:56
+msgid "Operation completed succesfully."
+msgstr ""
+
+#: frontend/pisa_error.cc:58
+msgid "Operation is not supported."
+msgstr ""
+
+#: frontend/pisa_error.cc:60
+msgid "Operation was cancelled."
+msgstr ""
+
+#: frontend/pisa_error.cc:62
+msgid "Device is busy---retry later."
+msgstr ""
+
+#: frontend/pisa_error.cc:64
+msgid "Data or argument is invalid."
+msgstr ""
+
+#: frontend/pisa_error.cc:66
+msgid "No more data available (end-of-file)."
+msgstr ""
+
+#: frontend/pisa_error.cc:68
+msgid ""
+"A paper jam occured.  Open the Automatic Document Feeder and remove any "
+"paper."
+msgstr ""
+"Ein Papierstau ist aufgetreten.\n"
+"Öffnen Sie den automatischen Vorlageneinzug, und entfernen Sie das gestaute "
+"Papier."
+
+#: frontend/pisa_error.cc:71
+msgid "Please load the document(s) into the Automatic Document Feeder."
+msgstr "Legen Sie die Vorlage(n) in den automatischen Vorlageneinzug ein."
+
+#: frontend/pisa_error.cc:74
+msgid ""
+"The automatic document feeder or scanner unit is open.\n"
+"Please close it."
+msgstr ""
+"Der automatische Vorlageneinzug oder die Scanner-Einheit ist offen. "
+"Schließen Sie den Einzug bzw. die Einheit."
+
+#: frontend/pisa_error.cc:77
+msgid "Error during device I/O."
+msgstr ""
+
+#: frontend/pisa_error.cc:79
+msgid "Out of memory."
+msgstr ""
+
+#: frontend/pisa_error.cc:81
+msgid "Access to resource has been denied."
+msgstr ""
+
+#: frontend/pisa_error.cc:84
+msgid "There is not enough disk space for operation"
+msgstr "Es ist nicht genug Festplattenspeicher für den Vorgang verfügbar"
+
+#: frontend/pisa_error.cc:87
+msgid ""
+"Could not send command to scanner.\n"
+"Check the scanner's status."
+msgstr ""
+"Es konnte kein Befehl an den Scanner gesendet werden. Überprüfen Sie den "
+"Scanner-Status."
+
+#: frontend/pisa_error.cc:91
+msgid "Scanner model not supported"
+msgstr "Scanner-Modell wird nicht"
+
+#: frontend/pisa_error.cc:94
+msgid ""
+"Selected area is too large for this resolution.\n"
+"Reduce the selected area or resolution."
+msgstr ""
+"Der ausgewählte Bereich ist zu groß für diese Auflösung.\n"
+"Stellen  Sie eine niedrigere Auflösung oder Skalierung ein, oder verkleinern "
+"Sie den ausgewählten Bereich."
+
+#: frontend/pisa_error.cc:98 frontend/pisa_error.cc:101
+msgid "Could not create file"
+msgstr "Die Datei konnte nicht erstellt werden"
+
+#: frontend/pisa_error.cc:104 frontend/pisa_view_manager.cc:1433
+msgid "Overwrite?"
+msgstr "Überschreiben?"
+
+#: frontend/pisa_error.cc:107
+msgid ""
+"The Image Type setting you selected cannot be used with this resolution.\n"
+"Reduce the Resolution or Scale setting."
+msgstr ""
+"Die Einstellung kann in dieser Auflösung nicht verwendet werden Bitte die "
+"Auflösung oder den Zoomfaktor verringern"
+
+#: frontend/pisa_error.cc:115
+msgid "Unexpected error occurred"
+msgstr "Kein Fehler"
+
+#: frontend/pisa_gamma_correction.cc:146
+msgid "Tone Correction"
+msgstr "Tonwertkorrektur"
+
+#: frontend/pisa_gamma_correction.cc:494
+msgid "  Reset  "
+msgstr "  Zurücksetzen  "
+
+#: frontend/pisa_image_controls.cc:152
+msgid "Image Controls"
+msgstr "Bildsteuerung"
+
+#: frontend/pisa_image_controls.cc:208
+msgid "Gamma:"
+msgstr "Gamma:"
+
+#: frontend/pisa_image_controls.cc:223
+msgid "Highlight:"
+msgstr "Lichter:"
+
+#: frontend/pisa_image_controls.cc:238
+msgid "Shadow:"
+msgstr "Schatten:"
+
+#: frontend/pisa_image_controls.cc:253
+msgid "Threshold:"
+msgstr "Schwellenwert:"
+
+#: frontend/pisa_main_window.cc:457
+msgid "File"
+msgstr "Datei"
+
+#: frontend/pisa_main_window.cc:458
+msgid "Printer"
+msgstr "Drucker"
+
+#: frontend/pisa_main_window.cc:461
+msgid "Flatbed"
+msgstr "Flachbett"
+
+#: frontend/pisa_main_window.cc:462
+msgid "TPU for Neg.Film"
+msgstr "TPU für Neg.Film"
+
+#: frontend/pisa_main_window.cc:463
+msgid "TPU for Pos.Film"
+msgstr "TPU für Pos.Film"
+
+#: frontend/pisa_main_window.cc:464
+msgid "Auto Document Feeder"
+msgstr "Automatischer Vorlageneinzug"
+
+#: frontend/pisa_main_window.cc:467
+msgid "Color Photo"
+msgstr "Farbfoto"
+
+#: frontend/pisa_main_window.cc:468
+msgid "Color Document"
+msgstr "Farbvorlage"
+
+#: frontend/pisa_main_window.cc:469
+msgid "Black & White Photo"
+msgstr "Schwarz-Weißfoto"
+
+#: frontend/pisa_main_window.cc:470
+msgid "Black & White Document"
+msgstr "Schwarz-Weiss Vorlage"
+
+#: frontend/pisa_main_window.cc:471
+msgid "Line Art"
+msgstr "Strichzeichnungen"
+
+#: frontend/pisa_main_window.cc:486
+msgid "inches"
+msgstr "Zoll"
+
+#: frontend/pisa_main_window.cc:487
+msgid "pixels"
+msgstr "Pixel"
+
+#: frontend/pisa_main_window.cc:488
+msgid "cm"
+msgstr "cm"
+
+#: frontend/pisa_main_window.cc:656
+msgid "Preview"
+msgstr "Vorschau"
+
+#: frontend/pisa_main_window.cc:667
+msgid "Zoom"
+msgstr "Zoom"
+
+#: frontend/pisa_main_window.cc:679
+msgid "Auto Exposure"
+msgstr "Automatische Belichtung"
+
+#: frontend/pisa_main_window.cc:716
+msgid "Destination:"
+msgstr "Ziel:"
+
+#: frontend/pisa_main_window.cc:728
+msgid "Scan"
+msgstr "Scannen"
+
+#: frontend/pisa_main_window.cc:741
+msgid "enable Start button"
+msgstr "Starttaste aktivieren"
+
+#: frontend/pisa_main_window.cc:799 frontend/pisa_scan_selector.cc:144
+msgid "Scanner:"
+msgstr "Scanner:"
+
+#: frontend/pisa_main_window.cc:821
+msgid "  Document  "
+msgstr "  Vorlage  "
+
+#: frontend/pisa_main_window.cc:829
+msgid "  Adjust  "
+msgstr "  Einstellungen  "
+
+#: frontend/pisa_main_window.cc:866
+msgid "Document Source:"
+msgstr "Dokumentenquelle:"
+
+#: frontend/pisa_main_window.cc:888
+msgid "Image Type:"
+msgstr "Bildtyp:"
+
+#: frontend/pisa_main_window.cc:901
+msgid "Resolution:"
+msgstr "Auflösung:"
+
+#: frontend/pisa_main_window.cc:914
+msgid "Unsharp mask"
+msgstr "Unscharfe Maske"
+
+#: frontend/pisa_main_window.cc:954
+msgid "Target"
+msgstr "Zielgröße"
+
+#: frontend/pisa_main_window.cc:965
+msgid "W:"
+msgstr "B:"
+
+#: frontend/pisa_main_window.cc:977
+msgid "H:"
+msgstr "H:"
+
+#: frontend/pisa_main_window.cc:1007
+msgid "Scale"
+msgstr "Zoom"
+
+#: frontend/pisa_main_window.cc:1033
+msgid "Focus"
+msgstr "Fokus"
+
+#: frontend/pisa_main_window.cc:1108
+msgid "  Configuration  "
+msgstr "  Konfiguration  "
+
+#: frontend/pisa_main_window.cc:1116
+msgid "  Close  "
+msgstr "  Schließen  "
+
+#: frontend/pisa_progress_window.cc:62 frontend/pisa_view_manager.cc:947
+msgid "  Finish  "
+msgstr "  Fertig stellen  "
+
+#: frontend/pisa_progress_window.cc:162
+msgid "Scanner is warming up. Please wait..."
+msgstr "Der Scanner befindet sich in der Aufwärmphase. Bitte warten..."
+
+#: frontend/pisa_progress_window.cc:165
+msgid "Pre-scanning in Progress"
+msgstr "Vorschau-Scan läuft"
+
+#: frontend/pisa_progress_window.cc:168
+msgid "Scanning in Progress"
+msgstr "Scanvorgang läuft"
+
+#: frontend/pisa_progress_window.cc:171
+msgid ""
+"Starting a sequence of scans.\n"
+"Press to scanner's Start button to start each scan."
+msgstr ""
+"Scan-Folge starten. Drücken Sie die Starttaste am Scanner, um einen Scan-"
+"Vorgang zu starten."
+
+#: frontend/pisa_scan_selector.cc:105
+msgid "Scan Selector Dialog"
+msgstr ""
+
+#: frontend/pisa_scan_selector.cc:165
+msgid "  Update  "
+msgstr "  Aktualisieren  "
+
+#: frontend/pisa_view_manager.cc:937
+msgid "  Continue  "
+msgstr "  Fortfahren  "
+
+#~ msgid ""
+#~ "In order to print, you must have an EPSON Photo Image Print System v1.3.1 "
+#~ "or greater  printer driver installed on your system."
+#~ msgstr ""
+#~ "Zum Drucken muss EPSON Photo Image Print System Version 1.3.1 oder höher "
+#~ "auf Ihrem System installiert sein."

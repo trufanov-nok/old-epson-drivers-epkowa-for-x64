@@ -1,0 +1,84 @@
+#! /usr/bin/make -f
+#  rules -- to create Debian packages
+#  Copyright (C) 2007  EPSON AVASYS Corporation
+#
+#  This file is part of the "Image Scan!" build infra-structure.
+#
+#  The "Image Scan!" build infra-structure is free software.
+#  You can redistribute it and/or modify it under the terms of the GNU
+#  General Public License as published by the Free Software Foundation;
+#  either version 2 of the License or at your option any later version.
+#
+#  This program is distributed in the hope that it will be useful, but
+#  WITHOUT ANY WARRANTY;  without even the implied warranty of FITNESS
+#  FOR A PARTICULAR PURPOSE or MERCHANTABILITY.
+#  See the GNU General Public License for more details.
+#
+#  You should have received a verbatim copy of the GNU General Public
+#  License along with this program; if not, write to:
+#
+#	 Free Software Foundation, Inc.
+#	 59 Temple Place, Suite 330
+#	 Boston, MA  02111-1307	 USA
+
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/autotools.mk
+
+
+#  Make sure that we build with all the "optional" bits.
+
+DEB_CONFIGURE_EXTRA_FLAGS += \
+	--enable-frontend \
+	--enable-jpeg \
+	--enable-png
+
+
+#  Before even thinking of packaging up the build results in a binary
+#  package, make sure the software's very own test suite is exercised
+#  in the build environment.
+
+DEB_MAKE_CHECK_TARGET = check
+
+
+#  It only looks as if we provide 'libsane'.  All we really provide is
+#  just a SANE backend.
+
+DEB_DH_MAKESHLIBS_ARGS_ALL = --exclude=libsane
+
+
+#  Add iscan as a system-wide GIMP plug-in.
+
+DEB_DH_LINK_ARGS = \
+	usr/bin/iscan `gimptool --gimpplugindir | sed 's,^/,,'`/plug-ins/iscan
+
+
+#  Let's *not* muck with udev rules in the installation scripts.
+
+build/iscan::
+	DEBUG=1 $(DEB_SRCDIR)/utils/make-udev-rules \
+	    $(DEB_SRCDIR)/utils/hotplug/iscan.usermap \
+	    > $(DEB_BUILDDIR)/debian/iscan.udev 2>/dev/null
+
+
+#  Tweak what goes into the binary package.  We don't do dynamic udev
+#  rules creation like in the RPM packages, nor do we modify dll.conf
+#  directly (using the Debian dll.d extension).
+
+pkglibdir      = $(DEB_DESTDIR)$(DEB_CONFIGURE_PREFIX)/lib/iscan
+sanelibdir     = $(DEB_DESTDIR)$(DEB_CONFIGURE_PREFIX)/lib/sane
+sanesysconfdir = $(DEB_DESTDIR)$(DEB_CONFIGURE_SYSCONFDIR)/sane.d
+applicationdir = $(DEB_DESTDIR)$(DEB_CONFIGURE_PREFIX)/share/applications
+
+install/iscan::
+	-rm -f $(sanelibdir)/libsane-epkowa.a
+	-rm -f $(pkglibdir)/make-udev-rules
+	-rmdir $(pkglibdir)
+	test -d $(sanesysconfdir)/dll.d || mkdir -p $(sanesysconfdir)/dll.d
+	test -d $(applicationdir)       || mkdir -p $(applicationdir)
+	install -m 0644 $(DEB_SRCDIR)/backend/epkowa.conf \
+	    $(sanesysconfdir)/
+	install -m 0644 $(DEB_SRCDIR)/debian/dll.conf \
+	    $(sanesysconfdir)/dll.d/iscan
+	install -m 0644 $(DEB_SRCDIR)/debian/iscan.desktop \
+	    $(applicationdir)/
