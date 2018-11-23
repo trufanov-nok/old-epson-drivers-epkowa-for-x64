@@ -54,7 +54,13 @@ pngstream::~pngstream ()
   set_error_handler (_png, _info);
 
   lib->write_flush (_png);	// just in case
-  if (_png->num_rows == _png->flush_rows) {
+  /* when not interlacing (ie, only one pass), number of rows is image height:  _v_sz */
+#if PNG_LIBPNG_VER > 10499
+  if (_v_sz == lib->get_current_row_number(_png))
+#else
+  if (_png->num_rows == _png->flush_rows)
+#endif
+  {
     lib->write_end (_png, _info);
   }
   lib->destroy_write_struct (&_png, &_info);
