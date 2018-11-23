@@ -33665,6 +33665,7 @@ fi
 # Check whether --enable-png was given.
 if test "${enable_png+set}" = set; then
   enableval=$enable_png; if test "x$enable_png" != xno; then
+		      LIBS="-lpng  $LIBS"
 		      iff_header="`echo png.h | $as_tr_sh`"
 
 for ac_header in png.h
